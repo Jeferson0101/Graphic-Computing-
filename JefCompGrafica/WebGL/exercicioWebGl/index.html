@@ -6,6 +6,7 @@
 <script id="meu-vertex-shader" type="hlsl">
     attribute vec4 posicao;
     uniform mat4 u_escala;
+    uniform mat4 u_rotaciona;
     void main(){
         //mat4 u_escala = mat4(480.0/840.0, 0, 0, 0,
         //                        0,  1, 0, 0,
@@ -13,7 +14,7 @@
         //                        0,  0, 0, 1);
                             
         
-        gl_Position = u_escala * posicao; 
+        gl_Position = u_escala * u_rotaciona * posicao; 
         
     }
 </script>
